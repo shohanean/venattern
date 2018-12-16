@@ -18,7 +18,7 @@
     <link href="{{ asset('css/patternlock.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="background-image: url('{{ asset('svg/403.svg') }}')">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
