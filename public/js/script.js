@@ -4,7 +4,7 @@ $(document).ready(function(){
   });
   $('#loginSubmitButton').click(function(){
     var patternPassword = lock.getPattern();
-    var emailAddress = $('#emailAddress').val();
+    var emailAddress = $('#email').val();
     if(jQuery.isEmptyObject(emailAddress)){
       swal(
         'Ooopss!',
@@ -23,31 +23,8 @@ $(document).ready(function(){
           );
         }
         else{
-          //Starting of AJAX request
-          $.ajaxSetup({
-            headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-          });
-          $.ajax({
-            type:'POST',
-            url:'/login',
-            data: {patternPassword:patternPassword, emailAddress:emailAddress},
-            success: function (data) {
-              alert(data);
-              // if(data == 'done'){
-              //   $("#product_name").val("");
-              //   $("#product_price").val("");
-              //   $("#success").addClass("alert alert-success");
-              //   $("#success_message").html("Successfully Inserted!");
-              //   $('#content_part').load(location.href+' #content_part');
-              // }
-              // else{
-              //   alert("bad");
-              // }
-            }
-          });
-          //Ending of AJAX request
+          $("#password").val(patternPassword);
+          $("#loginForm").submit();
         }
       }
       else {

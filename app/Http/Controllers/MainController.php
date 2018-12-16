@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    function login(Request $request)
+    function login_me(Request $request)
     {
-      $request->patternPassword
-      $request->emailAddress
+      echo $request->password;
+      //$request->emailAddress;
     }
 }

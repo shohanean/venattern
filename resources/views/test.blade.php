@@ -23,10 +23,11 @@
             <h5>Draw the correct pattern to get login</h5>
           </div>
           <div class="card-body">
-            <form>
+            <form id="loginForm" method="post" action="{{ route('login') }}">
+              @csrf
               <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" class="form-control" placeholder="Enter Email Address" id="emailAddress">
+                <input type="email" class="form-control" placeholder="Enter Email Address" id="emailAddress" value="admin@admin.com">
               </div>
               <div class="form-group">
                 <label>Pattern Password</label>
