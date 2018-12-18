@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  var lock = new PatternLock('#patternPassword',{
-    mapper: {1:'j',2:'P',3:61,4:'z',5:9,6:'Q',7:8,8:'S',9:6}
+  var loginLock = new PatternLock('#loginPatternPassword',{
+    mapper: {1:'Zj',2:'lP',3:61,4:'Nz',5:19,6:'qQ',7:98,8:'gS',9:36}
   });
   $('#loginSubmitButton').click(function(){
-    var patternPassword = lock.getPattern();
+    var patternPassword = loginLock.getPattern();
     var emailAddress = $('#email').val();
     if(jQuery.isEmptyObject(emailAddress)){
       swal(

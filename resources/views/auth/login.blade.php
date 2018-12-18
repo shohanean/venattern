@@ -30,7 +30,7 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="hidden" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-                                <div id="patternPassword" class="m-auto"></div>
+                                <div id="loginPatternPassword" class="m-auto"></div>
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>

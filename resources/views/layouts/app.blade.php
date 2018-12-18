@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -17,8 +17,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/patternlock.css') }}" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <div id="app" style="background-image: url('{{ asset('svg/403.svg') }}')">
+<body style="background-image: url('{{ asset('bg.jpg') }}');background-repeat: no-repeat;background-size: cover;">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -70,7 +70,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="opacity:0.95">
             @yield('content')
         </main>
     </div>
@@ -80,5 +80,6 @@
     <script src="{{ asset('js/patternlock.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/sweetalert2.all.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/script.js') }}" type="text/javascript"></script>
+    @yield('footer_scripts')
 </body>
 </html>
