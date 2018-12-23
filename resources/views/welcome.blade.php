@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{ config('app.name') }}</title>
-
+        <link rel="shortcut icon" href="{{ asset('favicon.png') }}"/>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
@@ -46,6 +46,10 @@
 
             .title {
                 font-size: 84px;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                padding: 0px 50px 0px 50px;
+                opacity: 0.8;
             }
 
             .links > a {
@@ -56,6 +60,10 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                border-radius: 2px;
+                padding: 150px 15px 5px 15px;
+                opacity: 0.9;
+                background-color: #FFFFFF;
             }
 
             .m-b-md {
@@ -63,7 +71,7 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-image: url('{{ asset('bg.jpg') }}');background-repeat: no-repeat;background-size: cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
